@@ -39,6 +39,13 @@ public class JacquardAndroidHelper {
         this.test = test;
     }
 
+    public void getGestureCount() {
+
+       // AndroidElement woreItBest =  driver
+
+
+    }
+
     public  enum GESTURES{
 
         DOUBLETAP,BRUSHIN,BRUSHOUT
@@ -494,6 +501,13 @@ return false;
         AndroidElement searchTxt = (AndroidElement) driver
                 .findElement(By.id("com.google.android.apps.nexuslauncher:id/search_box_input"));
         searchTxt.sendKeys("Ja");
+
+
+
+
+
+
+
 
         driver.manage().timeouts().implicitlyWait(15, SECONDS);
 
