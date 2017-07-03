@@ -1,24 +1,21 @@
-package com.google.jacquard.android.helper;
+package com.google.jacquard.android;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.google.jacquard.base.PageActivity;
 import com.google.jacquard.utils.CommandExec;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
-import org.apache.bcel.generic.SWITCH;
-import org.apache.poi.util.SystemOutLogger;
 import org.joda.time.DateTime;
-import org.omg.CORBA.portable.ValueInputStream;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -29,19 +26,44 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 /**
  * Created by user on 6/1/17.
  */
-public class JacquardAndroidHelper {
+public class JacquardAndroidHelper  extends PageActivity {
 
     AndroidDriver driver;
     ExtentTest test;
 
     public JacquardAndroidHelper(AppiumDriver driver, ExtentTest test) {
-        this.driver = (AndroidDriver) driver;
-        this.test = test;
+       super(driver,test);
     }
 
-    public void getGestureCount() {
 
-       // AndroidElement woreItBest =  driver
+
+
+    public void getGestureCount() throws InterruptedException {
+
+        swipeLeft();
+        AndroidElement WoreItBestText = (AndroidElement) driver.findElementByAndroidUIAutomator("new UiSelector().text(\"WORE IT BEST\")");
+        WoreItBestText.click();
+
+        Thread.sleep(4000);
+
+
+       // AndroidElement woreItBest = (AndroidElement) driver.findElementByXPath("//android.widget.LinearLayout[@index = ‘0’]/android.widget.TextView[@resource-id =‘com.google.atap.jacquard:id/ability_usage_count’]");
+
+      //  List<AndroidElement> all = (List<AndroidElement>) driver.findElements(By.xpath("//android.widget.TextView[@resource-id =‘com.google.atap.jacquard:id/ability_usage_count’]"));
+
+        List<AndroidElement> usedCount = driver.findElements(By.id("com.google.atap.jacquard:id/ability_usage_count"));
+        System.out.println(usedCount.size());
+        System.out.println("Swipe out "+usedCount.get(0).getText());
+        System.out.println("Swipe out "+usedCount.get(1).getText());
+        System.out.println("Swipe out "+usedCount.get(2).getText());
+        //   System.out.println(woreItBest.getText());
+
+
+        List<AndroidElement> abilitiesDisplayed = driver.findElements(By.id("com.google.atap.jacquard:id/ability_name"));
+        System.out.println( abilitiesDisplayed.size());
+        System.out.println( abilitiesDisplayed.get(0).getText()+" : "+usedCount.get(0).getText());
+        System.out.println( abilitiesDisplayed.get(1).getText()+" : "+usedCount.get(1).getText());
+        System.out.println( abilitiesDisplayed.get(2).getText()+" : "+usedCount.get(2).getText());
 
 
     }
@@ -185,18 +207,17 @@ public class JacquardAndroidHelper {
             Markup markup = MarkupHelper.createLabel("Battery level: " +integerValue+" Battery Level not changed !!" +" at "+hr+":"+min, ExtentColor.GREEN);
             test.info(markup);
 
-
-
         }
-
-
-
 
     }
 
+public boolean isReFlect(){
 
 
+return true;
 
+
+}
 
 
 
@@ -894,15 +915,9 @@ return false;
 
     public void assignBrushOutGesture() throws Exception {
 
-        String gesture = getGesture(GESTURES.DOUBLETAP);
-        System.out.println("'Double Tap"+ gesture );
+        String gesture = getGesture(GESTURES.BRUSHOUT);
+        System.out.println("Gesture: "+ gesture );
         assignPirtucularGesture(gesture);
-
-
-
-
-
-
 
 //        String path = System.getProperty("user.dir");
 //        InputStream in = getClass().getClassLoader().getResourceAsStream(path + "config.properties");
