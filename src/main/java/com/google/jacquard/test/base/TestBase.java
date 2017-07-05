@@ -16,6 +16,7 @@ import com.google.jacquard.utils.CommandExec;
 import com.google.jacquard.utils.Constants;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import org.joda.time.DateTime;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -227,14 +228,22 @@ public void killAllAppiumInstances(){
 }
 
 
-public  void startAppiumProcess(String port, String id){
+public  void startAppiumProcess(String port, String configration){
+
+    DateTime time = new DateTime();
+    int hr =  time.getHourOfDay();
+    int min = time.getMinuteOfHour();
+
+    String fileName = configration+"_"+Integer.toString(hr)+"_"+Integer.toString(min);
+    ;
+    System.out.println(hr + ":"+min);
 
 
     List<String> values = new ArrayList<String>();
     try {
 
 
-        ProcessBuilder pb = new ProcessBuilder("/bin/bash", "-c",  "/usr/local/bin/appium -a 0.0.0.0 -p "+port );
+        ProcessBuilder pb = new ProcessBuilder("/bin/bash", "-c",  "/usr/local/bin/appium -a 0.0.0.0 -p "+port+" > "+fileName+".log" );
         Process process = pb.start();
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));

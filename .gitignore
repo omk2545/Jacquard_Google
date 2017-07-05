@@ -1,0 +1,35 @@
+
+*.xml
+*.json
+*.png
+*.nib
+*.plist
+*.strings
+*.omo
+*.fw
+*.ttf
+*.car
+*.bin
+*.mov
+*.mp4
+*.caf
+application/ios_simulator/Payload/Jacquard QA.app/PkgInfo
+application/ios_simulator/Payload/JacquardSimulator.app/_CodeSignature/CodeResources
+*.xcent
+*.mobileprovision
+application/ios_simulator/Payload/JacquardSimulator.app/PkgInfo
+*.iml
+BarChart.jpeg
+*.xml
+.idea/.name
+.idea/.DS_Store
+*.xml
+.idea/vcs.xml
+*.prefs
+application/ios_simulator/.DS_Store
+application/ios_simulator/Payload/Jacquard QA.app/_CodeSignature/CodeResources
+application/ios_simulator/Payload/.DS_Store
+*.otf
+application/ios_simulator/Payload/Jacquard QA.app/Jacquard QA
+application/ios_simulator/Payload/JacquardSimulator.app/JacquardSimulator
+*.mom

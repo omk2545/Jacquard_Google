@@ -57,9 +57,11 @@ public class Constants {
 
 
 //public static final String iphone_udid ="d39eb3b88f2fbe7b5f5db53a7767f30292659b76";
+//public static final String iphone_udid ="1efff257c722ce529772166eb889a4ca1e0bdf12";
 //public static final String iphone_udid ="1dae97c7b2a2203799e620d2197a6165f6e65f10";
 public static final String iphone_udid ="7b08191588aaeaab55465e973704a94febd3e4b8";
-
+//public static final String iphone_udid ="10.9.45.176";
+//7b08191588aaeaab55465e973704a94febd3e4b8
 //IOS Accibility id
     public static final String currentTimeIcon_IOS = "icCurrentTime";
     public static final String playPauseIcon_IOS = "icPlayPause";
@@ -73,7 +75,7 @@ public static final String iphone_udid ="7b08191588aaeaab55465e973704a94febd3e4b
     public static final String place_text_ios = "Place Name";
     public static final String nextDirectionIcon = "icNextDirection";
     public static final String countIcon_IOS = "icCount";
-    public static final String userName = "omkarbrio@gmail.com";
+    public static final String userName = "Omkar Brio omkarbrio@gmail.com";
     public static final String jacket_Id_Ios = "26680XL0001";
 
     // *****  IOS Buttons *****

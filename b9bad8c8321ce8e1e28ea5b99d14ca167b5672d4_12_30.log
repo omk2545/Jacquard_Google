@@ -1,0 +1,9 @@
+[Appium] Welcome to Appium v1.6.4
+Error: listen EADDRINUSE 0.0.0.0:4723
+    at Object.exports._errnoException (util.js:1050:11)
+    at exports._exceptionWithHostPort (util.js:1073:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1263:14)
+    at listenInCluster (net.js:1304:12)
+    at doListen (net.js:1428:7)
+    at _combinedTickCallback (internal/process/next_tick.js:83:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)

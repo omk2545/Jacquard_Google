@@ -1,0 +1,156 @@
+[Appium] Welcome to Appium v1.6.4
+[Appium] Appium REST http interface listener started on 0.0.0.0:4723
+[HTTP] --> POST /wd/hub/session {"capabilities":[{"desiredCapabilities":{"app":"/Users/user/OmkarAutomation/application/ios_simulator/Payload/JacquardSimulator.app","noReset":true,"xcodeOrgID":"EQHXZ8M8AV","xcodeSigninID":"iPhone Developer","deviceName":"User’s iPhone","wdaLocalPort":8101,"showIOSLog":false,"newCommandTimeout":"2000","platformVersion":"10.2.1","automationName":"XCUITEST","useNewWDA":true,"udid":"b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4","platformName":"iOS"}},{"requiredCapabilities":{}}],"desiredCapabilities":{"app":"/Users/user/OmkarAutomation/application/ios_simulator/Payload/JacquardSimulator.app","noReset":true,"xcodeOrgID":"EQHXZ8M8AV","xcodeSigninID":"iPhone Developer","deviceName":"User’s iPhone","wdaLocalPort":8101,"showIOSLog":false,"newCommandTimeout":"2000","platformVersion":"10.2.1","automationName":"XCUITEST","useNewWDA":true,"udid":"b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4","platformName":"iOS"},"requiredCapabilities":{}}
+[debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"app":"/Users/user/OmkarAutomation/application/ios_simulator/Payload/JacquardSimulator.app","noReset":true,"xcodeOrgID":"EQHXZ8M8AV","xcodeSigninID":"iPhone Developer","deviceName":"User’s iPhone","wdaLocalPort":8101,"showIOSLog":false,"newCommandTimeout":"2000","platformVersion":"10.2.1","automationName":"XCUITEST","useNewWDA":true,"udid":"b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4","platformName":"iOS"},{},[{"desiredCapabilities":{"app":"/Users/user/OmkarAutomation/application/ios_simulator/Payload/JacquardSimulator.app","noReset":true,"xcodeOrgID":"EQHXZ8M8AV","xcodeSigninID":"iPhone Developer","deviceName":"User’s iPhone","wdaLocalPort":8101,"showIOSLog":false,"newCommandTimeout":"2000","platformVersion":"10.2.1","automationName":"XCUITEST","useNewWDA":true,"udid":"b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4","platformName":"iOS"}},{"requiredCapabilities":{}}],null,null]
+[debug] [BaseDriver] Event 'newSessionRequested' logged at 1499238177280 (12:32:57 GMT+0530 (IST))
+[Appium] Creating new XCUITestDriver (v2.27.2) session
+[Appium] Capabilities:
+[Appium]   app: '/Users/user/OmkarAutomation/application/ios_simulator/Payload/JacquardSimulator.app'
+[Appium]   noReset: true
+[Appium]   xcodeOrgID: 'EQHXZ8M8AV'
+[Appium]   xcodeSigninID: 'iPhone Developer'
+[Appium]   deviceName: 'User’s iPhone'
+[Appium]   wdaLocalPort: 8101
+[Appium]   showIOSLog: false
+[Appium]   newCommandTimeout: '2000'
+[Appium]   platformVersion: '10.2.1'
+[Appium]   automationName: 'XCUITEST'
+[Appium]   useNewWDA: true
+[Appium]   udid: 'b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4'
+[Appium]   platformName: 'iOS'
+[debug] [XCUITest] XCUITestDriver version: 2.27.2
+[BaseDriver] Capability 'newCommandTimeout' changed from string ('2000') to integer (2000). This may cause unexpected behavior
+[BaseDriver] The following capabilities were provided, but are not recognized by appium: xcodeOrgID, xcodeSigninID.
+[BaseDriver] Session created with session id: 143a7ca5-a952-4447-87f4-a6de3f8f8817
+[debug] [XCUITest] Xcode version set to '8.3.3' (tools v8.3.2.0.1.1492020469)
+[debug] [XCUITest] iOS SDK Version set to '10.3'
+[debug] [BaseDriver] Event 'xcodeDetailsRetrieved' logged at 1499238178054 (12:32:58 GMT+0530 (IST))
+[debug] [XCUITest] Available devices: 7b08191588aaeaab55465e973704a94febd3e4b8, b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4
+[debug] [XCUITest] Creating iDevice object with udid 'b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4'
+[XCUITest] Determining device to run tests on: udid: 'b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4', real device: true
+[BaseDriver] Using local app '/Users/user/OmkarAutomation/application/ios_simulator/Payload/JacquardSimulator.app'
+[debug] [BaseDriver] Event 'appConfigured' logged at 1499238178368 (12:32:58 GMT+0530 (IST))
+[debug] [XCUITest] Checking whether app '/Users/user/OmkarAutomation/application/ios_simulator/Payload/JacquardSimulator.app' is actually present on file system
+[debug] [XCUITest] App is present
+[debug] [iOS] Getting bundle ID from app '/Users/user/OmkarAutomation/application/ios_simulator/Payload/JacquardSimulator.app': 'com.synapse.JacquardSimulator'
+[debug] [BaseDriver] Event 'resetStarted' logged at 1499238178386 (12:32:58 GMT+0530 (IST))
+[debug] [XCUITest] Reset: fullReset not set. Leaving as is
+[debug] [BaseDriver] Event 'resetComplete' logged at 1499238178387 (12:32:58 GMT+0530 (IST))
+[debug] [iOSLog] Attempting iOS device log capture via libimobiledevice idevicesyslog
+[debug] [iOSLog] Found idevicesyslog: '/usr/local/bin/idevicesyslog'
+[debug] [BaseDriver] Event 'logCaptureStarted' logged at 1499238178658 (12:32:58 GMT+0530 (IST))
+[XCUITest] Setting up real device
+[debug] [XCUITest] App 'com.synapse.JacquardSimulator' is already installed. No need to reinstall.
+[debug] [BaseDriver] Event 'appInstalled' logged at 1499238179131 (12:32:59 GMT+0530 (IST))
+[debug] [BaseDriver] Event 'wdaStartAttempted' logged at 1499238179135 (12:32:59 GMT+0530 (IST))
+[XCUITest] Using WDA path: '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent'
+[XCUITest] Using WDA agent: '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent/WebDriverAgent.xcodeproj'
+[debug] [XCUITest] Capability 'useNewWDA' set, so uninstalling WDA before proceeding
+[debug] [XCUITest] Removing WDA application from device
+[debug] [BaseDriver] Event 'wdaUninstalled' logged at 1499238179590 (12:32:59 GMT+0530 (IST))
+[XCUITest] Launching WebDriverAgent on the device
+[debug] [XCUITest] Carthage found: '/usr/local/bin/carthage'
+[debug] [XCUITest] Killing hanging processes
+[debug] [XCUITest] Beginning test with command 'xcodebuild build-for-testing test-without-building -project /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent/WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination id=b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4 -configuration Debug IPHONEOS_DEPLOYMENT_TARGET=10.2' in directory '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent'
+[debug] [XCUITest] Output from xcodebuild will not be logged
+[debug] [XCUITest] Starting iproxy to forward traffic from local port 8101 to device port 8100 over USB
+[debug] [XCUITest] Waiting up to 60000ms for WebDriverAgent to start
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [XCUITest] Log file for xcodebuild test: /Users/user/Library/Developer/Xcode/DerivedData/WebDriverAgent-brdadhpuduowllgivnnvuygpwhzy/Logs/Test/46441B53-3A6D-43C3-811C-0D3E2CCA5BE9/Session-WebDriverAgentRunner-2017-07-05_123312-3GLT0Z.log
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8101/status] with no body
+[debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : {\n    \"state\" : \"success\",\n    \"os\" : {\n      \"name\" : \"iOS\",\n      \"version\" : \"10.2.1\"\n    },\n    \"ios\" : {\n      \"simulatorVersion\" : \"10.2.1\",\n      \"ip\" : \"10.9.45.39\"\n    },\n    \"build\" : {\n      \"time\" : \"Jun 21 2017 12:34:50\"\n    }\n  },\n  \"sessionId\" : \"389CC9E9-CF5F-4585-AD7E-49733F92A845\",\n  \"status\" : 0\n}"
+[debug] [XCUITest] WebDriverAgent running on ip '10.9.45.39'
+[debug] [XCUITest] WebDriverAgent successfully started after 19389ms
+[debug] [BaseDriver] Event 'wdaSessionAttempted' logged at 1499238204180 (12:33:24 GMT+0530 (IST))
+[debug] [XCUITest] Sending createSession command to WDA
+[debug] [JSONWP Proxy] Proxying [POST /session] to [POST http://localhost:8101/session] with body: {"desiredCapabilities":{"bundleId":"com.synapse.JacquardSimulator","arguments":[],"environment":{},"shouldWaitForQuiescence":true,"shouldUseTestManagerForVisibilityDetection":false,"maxTypingFrequency":60,"shouldUseSingletonTestManager":true}}
+[debug] [JSONWP Proxy] Got response with status 200: {"value":{"sessionId":"973F3DC6-D3EF-40E6-B27F-DA89C6AABA75","capabilities":{"device":"ipad","browserName":"Jacq. Sim","sdkVersion":"10.2.1","CFBundleIdentifier":"com.synapse.JacquardSimulator"}},"sessionId":"973F3DC6-D3EF-40E6-B27F-DA89C6AABA75","status":0}
+[debug] [BaseDriver] Event 'wdaSessionStarted' logged at 1499238208605 (12:33:28 GMT+0530 (IST))
+[debug] [XCUITest] Found WDA derived data folder: '/Users/user/Library/Developer/Xcode/DerivedData/WebDriverAgent-brdadhpuduowllgivnnvuygpwhzy'
+[XCUITest] Setting '555' permissions to '/Users/user/Library/Developer/Xcode/DerivedData/WebDriverAgent-brdadhpuduowllgivnnvuygpwhzy/Logs/Test/Attachments' folder
+[debug] [XCUITest] Found WDA derived data folder: '/Users/user/Library/Developer/Xcode/DerivedData/WebDriverAgent-dikkwtrisltbeobjmfvpthwwekvs'
+[XCUITest] Setting '555' permissions to '/Users/user/Library/Developer/Xcode/DerivedData/WebDriverAgent-dikkwtrisltbeobjmfvpthwwekvs/Logs/Test/Attachments' folder
+[debug] [BaseDriver] Event 'wdaPermsAdjusted' logged at 1499238208620 (12:33:28 GMT+0530 (IST))
+[debug] [BaseDriver] Event 'wdaStarted' logged at 1499238208621 (12:33:28 GMT+0530 (IST))
+[debug] [XCUITest] Setting initial orientation to 'PORTRAIT'
+[debug] [JSONWP Proxy] Proxying [POST /orientation] to [POST http://localhost:8101/session/973F3DC6-D3EF-40E6-B27F-DA89C6AABA75/orientation] with body: {"orientation":"PORTRAIT"}
+[debug] [JSONWP Proxy] Got response with status 200: {"value":{},"sessionId":"973F3DC6-D3EF-40E6-B27F-DA89C6AABA75","status":0}
+[debug] [BaseDriver] Event 'orientationSet' logged at 1499238209205 (12:33:29 GMT+0530 (IST))
+[Appium] New XCUITestDriver session created successfully, session 143a7ca5-a952-4447-87f4-a6de3f8f8817 added to master session list
+[debug] [BaseDriver] Event 'newSessionStarted' logged at 1499238209210 (12:33:29 GMT+0530 (IST))
+[debug] [MJSONWP] Responding to client with driver.createSession() result: {"webStorageEnabled":false,"locationContextEnabled":false,"browserName":"","platform":"MAC","javascriptEnabled":true,"databaseEnabled":false,"takesScreenshot":true,"networkConnectionEnabled":false,"app":"/Users/user/OmkarAutomation/application/ios_simulator/Payload/JacquardSimulator.app","noReset":true,"xcodeOrgID":"EQHXZ8M8AV","xcodeSigninID":"iPhone Developer","deviceName":"User’s iPhone","wdaLocalPort":8101,"showIOSLog":false,"newCommandTimeout":"2000","platformVersion":"10.2.1","automationName":"XCUITEST","useNewWDA":true,"udid":"b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4","platformName":"iOS"}
+[HTTP] <-- POST /wd/hub/session 200 31950 ms - 677 
+[HTTP] --> GET /wd/hub/session/143a7ca5-a952-4447-87f4-a6de3f8f8817 {}
+[debug] [MJSONWP] Calling AppiumDriver.getSession() with args: ["143a7ca5-a952-4447-87f4-a6de3f8f8817"]
+[debug] [XCUITest] Executing command 'getSession'
+[debug] [JSONWP Proxy] Proxying [GET /] to [GET http://localhost:8101/session/973F3DC6-D3EF-40E6-B27F-DA89C6AABA75] with no body
+[debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : {\n    \"sessionId\" : \"973F3DC6-D3EF-40E6-B27F-DA89C6AABA75\",\n    \"capabilities\" : {\n      \"device\" : \"ipad\",\n      \"browserName\" : \"Jacq. Sim\",\n      \"sdkVersion\" : \"10.2.1\",\n      \"CFBundleIdentifier\" : \"com.synapse.JacquardSimulator\"\n    }\n  },\n  \"sessionId\" : \"973F3DC6-D3EF-40E6-B27F-DA89C6AABA75\",\n  \"status\" : 0\n}"
+[XCUITest] Merging WDA caps over Appium caps for session detail response
+[debug] [MJSONWP] Responding to client with driver.getSession() result: {"udid":"b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4","app":"/Users/user/OmkarAutomation/application/ios_simulator/Payload/JacquardSimulator.app","noReset":true,"xcodeOrgID":"EQHXZ8M8AV","xcodeSigninID":"iPhone Developer","deviceName":"User’s iPhone","wdaLocalPort":8101,"showIOSLog":false,"newCommandTimeout":2000,"platformVersion":"10.2.1","automationName":"XCUITEST","useNewWDA":true,"platformName":"iOS","device":"ipad","browserName":"Jacq. Sim","sdkVersion":"10.2.1","CFBundleIdentifier":"com.synapse.JacquardSimulator"}
+[HTTP] <-- GET /wd/hub/session/143a7ca5-a952-4447-87f4-a6de3f8f8817 200 335 ms - 596 
+[HTTP] --> GET /wd/hub/session/143a7ca5-a952-4447-87f4-a6de3f8f8817 {}
+[debug] [MJSONWP] Calling AppiumDriver.getSession() with args: ["143a7ca5-a952-4447-87f4-a6de3f8f8817"]
+[debug] [XCUITest] Executing command 'getSession'
+[debug] [JSONWP Proxy] Proxying [GET /] to [GET http://localhost:8101/session/973F3DC6-D3EF-40E6-B27F-DA89C6AABA75] with no body
+[debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : {\n    \"sessionId\" : \"973F3DC6-D3EF-40E6-B27F-DA89C6AABA75\",\n    \"capabilities\" : {\n      \"device\" : \"ipad\",\n      \"browserName\" : \"Jacq. Sim\",\n      \"sdkVersion\" : \"10.2.1\",\n      \"CFBundleIdentifier\" : \"com.synapse.JacquardSimulator\"\n    }\n  },\n  \"sessionId\" : \"973F3DC6-D3EF-40E6-B27F-DA89C6AABA75\",\n  \"status\" : 0\n}"
+[XCUITest] Merging WDA caps over Appium caps for session detail response
+[debug] [MJSONWP] Responding to client with driver.getSession() result: {"udid":"b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4","app":"/Users/user/OmkarAutomation/application/ios_simulator/Payload/JacquardSimulator.app","noReset":true,"xcodeOrgID":"EQHXZ8M8AV","xcodeSigninID":"iPhone Developer","deviceName":"User’s iPhone","wdaLocalPort":8101,"showIOSLog":false,"newCommandTimeout":2000,"platformVersion":"10.2.1","automationName":"XCUITEST","useNewWDA":true,"platformName":"iOS","device":"ipad","browserName":"Jacq. Sim","sdkVersion":"10.2.1","CFBundleIdentifier":"com.synapse.JacquardSimulator"}
+[HTTP] <-- GET /wd/hub/session/143a7ca5-a952-4447-87f4-a6de3f8f8817 200 445 ms - 596 
+[HTTP] --> POST /wd/hub/session/143a7ca5-a952-4447-87f4-a6de3f8f8817/timeouts {"type":"implicit","ms":30000}
+[debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",30000,"143a7ca5-a952-4447-87f4-a6de3f8f8817"]
+[debug] [XCUITest] Executing command 'timeouts'
+[debug] [BaseDriver] Set implicit wait to 30000ms
+[debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+[HTTP] <-- POST /wd/hub/session/143a7ca5-a952-4447-87f4-a6de3f8f8817/timeouts 200 33 ms - 76 
+[debug] [XCUITest] Connection to WDA timed out
+[debug] [iProxy] recv failed: Operation not permitted
+[HTTP] --> POST /wd/hub/session/143a7ca5-a952-4447-87f4-a6de3f8f8817/element {"using":"name","value":"Connected"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["name","Connected","143a7ca5-a952-4447-87f4-a6de3f8f8817"]
+[debug] [XCUITest] Executing command 'findElement'
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id
+[debug] [BaseDriver] Waiting up to 30000 ms for condition
+[debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8101/session/973F3DC6-D3EF-40E6-B27F-DA89C6AABA75/element] with body: {"using":"name","value":"Connected"}
+[debug] [JSONWP Proxy] Got response with status 200: {"value":{"ELEMENT":"95EAD2F9-A172-4F66-B1AD-CDF28B14F60E","type":"XCUIElementTypeStaticText","label":"Connected"},"sessionId":"973F3DC6-D3EF-40E6-B27F-DA89C6AABA75","status":0}
+[debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"95EAD2F9-A172-4F66-B1AD-CDF28B14F60E","type":"XCUIElementTypeStaticText","label":"Connected"}
+[HTTP] <-- POST /wd/hub/session/143a7ca5-a952-4447-87f4-a6de3f8f8817/element 200 752 ms - 177 
+[HTTP] --> GET /wd/hub/session/143a7ca5-a952-4447-87f4-a6de3f8f8817/element/95EAD2F9-A172-4F66-B1AD-CDF28B14F60E/displayed {}
+[MJSONWP] Driver proxy active, passing request on via HTTP proxy
+[debug] [XCUITest] Executing command 'proxyReqRes'
+[debug] [JSONWP Proxy] Proxying [GET /wd/hub/session/143a7ca5-a952-4447-87f4-a6de3f8f8817/element/95EAD2F9-A172-4F66-B1AD-CDF28B14F60E/displayed] to [GET http://localhost:8101/session/973F3DC6-D3EF-40E6-B27F-DA89C6AABA75/element/95EAD2F9-A172-4F66-B1AD-CDF28B14F60E/displayed] with body: {}
+[debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : true,\n  \"sessionId\" : \"973F3DC6-D3EF-40E6-B27F-DA89C6AABA75\",\n  \"status\" : 0\n}"
+[JSONWP Proxy] Replacing sessionId 973F3DC6-D3EF-40E6-B27F-DA89C6AABA75 with 143a7ca5-a952-4447-87f4-a6de3f8f8817
+[HTTP] <-- GET /wd/hub/session/143a7ca5-a952-4447-87f4-a6de3f8f8817/element/95EAD2F9-A172-4F66-B1AD-CDF28B14F60E/displayed 200 361 ms - 76 
+[debug] [XCUITest] iproxy exited with code 'null'
+[Appium] Received SIGINT - shutting down
+[XCUITest] xcodebuild exited with code 'null' and signal 'SIGINT'
+[Appium] Received SIGTERM - shutting down

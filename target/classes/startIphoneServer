@@ -1,0 +1,2 @@
+#/bin/bash
+appium -a 0.0.0.0 -p 4727 -U 7b08191588aaeaab55465e973704a94febd3e4b8

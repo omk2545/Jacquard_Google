@@ -5,10 +5,7 @@ import com.google.jacquard.ios.JacquardAppleHelper;
 import com.google.jacquard.test.base.TestBase;
 import com.google.jacquard.utils.CreateGraph;
 import io.appium.java_client.ios.IOSDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
 import java.util.Collections;
@@ -33,13 +30,13 @@ public class testAppleAutomation extends TestBase{
 
 
     }
-
+  public  Map<String, Integer> sortedMap;
     @Test
     public void testOnboardingApple() throws MalformedURLException, InterruptedException {
 
       //  simulator = createSimulatorInstance();
 
-        Map<String, Integer> sortedMap = new TreeMap<String, Integer>();
+         sortedMap = new TreeMap<String, Integer>();
 
         iphone = createDeviceInstance();
         simulator=createSimulatorInstance();
@@ -86,15 +83,22 @@ appleHelper.logDetails("Finding the Jacket(Emulator)");
         }
 
 
-        if(!sim.IsEmulatorConnected()) {
+//        if(!sim.IsEmulatorConnected()) {
+//
+//            appleHelper.addinngNewJacket();
+//            appleHelper.sleep(10000);
+//            if(sim.IsEmulatorConnected()) {
+//                appleHelper.resetApp();
+//            }
+//
+//        }
 
-            appleHelper.addinngNewJacket();
+
+        appleHelper.addinngNewJacket();
             appleHelper.sleep(10000);
             if(sim.IsEmulatorConnected()) {
                 appleHelper.resetApp();
             }
-
-        }
         appleHelper.sleep(9000);
 
 
@@ -122,11 +126,11 @@ appleHelper.assignDoubleTapGesture();
 
 sortedMap = appleHelper.iosLogRelativeBatteryLevels(sortedMap,initialBatteryLevel);
 
-for (int i  = 0;i<25;i++)
+for (int i  = 0;i<50;i++)
 
 {
     System.out.println("Loop "+i);
-    sim.performALlGestures(5);
+    sim.performALlGestures(5);//5*3  // 15*count
 appleHelper.swipeLeft();
 appleHelper.swipeRight();
     //appleHelper.iosLogRelativeBatteryLevels(initialBatteryLevel);
@@ -139,8 +143,8 @@ appleHelper.swipeRight();
         }
         System.out.println(sortedMap);
 
-        CreateGraph createGraph = new CreateGraph();
-        createGraph.lineChart(sortedMap);
+//        CreateGraph createGraph = new CreateGraph();
+//        createGraph.lineChart(sortedMap);
 
     }
 
@@ -154,35 +158,16 @@ appleHelper.swipeRight();
         JacquardAppleHelper appleHelper = new JacquardAppleHelper(iphone, test);
         //JacquardAppleHelper sim = new JacquardAppleHelper(simulator,test);
 
-        Map<String, Integer> sortedMap = new TreeMap<String, Integer>(Collections.reverseOrder());
+appleHelper.openMenu();
+appleHelper.swipeLeft();
 
+appleHelper.sleep(3000);
 
-        sortedMap = appleHelper.logInitalBatteryLevel(sortedMap);
-        System.out.println(sortedMap);
-
-        sortedMap = appleHelper.iosLogRelativeBatteryLevels(sortedMap,100);
-        appleHelper.sleep(2000);
-        sortedMap = appleHelper.iosLogRelativeBatteryLevels(sortedMap,100);
-        appleHelper.sleep(2000);
-        sortedMap = appleHelper.iosLogRelativeBatteryLevels(sortedMap,100);
-        appleHelper.sleep(2000);
-        sortedMap = appleHelper.iosLogRelativeBatteryLevels(sortedMap,100);
-        appleHelper.sleep(2000);
-        sortedMap = appleHelper.iosLogRelativeBatteryLevels(sortedMap,100);
-        appleHelper.sleep(2000);
-        sortedMap = appleHelper.iosLogRelativeBatteryLevels(sortedMap,100);
-        appleHelper.sleep(2000);
-        sortedMap = appleHelper.iosLogRelativeBatteryLevels(sortedMap,100);
-        appleHelper.sleep(2000);
-
-
-        System.out.println("MAP" +sortedMap);
-
-        CreateGraph createGraph = new CreateGraph();
-        createGraph.lineChart(sortedMap);
+//appleHelper.swipeUp();
+  //      System.out.println(appleHelper.isUserOnBoarded());
 
         //
-//            appleHelper.exitCommuterScreen();
+            appleHelper.exitCommuterScreen();
 //            appleHelper.exitCommuterScreen();
 //            appleHelper.exitCommuterScreen();
 
@@ -200,13 +185,22 @@ appleHelper.swipeRight();
 
 
 
+
     @AfterMethod
     public void tearDown(){
 
+        CreateGraph createGraph = new CreateGraph();
+        createGraph.lineChart(sortedMap);
 
      extentReports.flush();
-      iphone.quit();
-      simulator.quit();
+
+        if (iphone != null) {
+            iphone.quit();
+        }
+        if (simulator != null) {
+            simulator.quit();
+        }
+
         killAllAppiumInstances();
     }
 

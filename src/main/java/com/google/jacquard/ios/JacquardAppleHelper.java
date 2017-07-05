@@ -14,6 +14,8 @@ import io.appium.java_client.*;
 import io.appium.java_client.ios.IOSTouchAction;
 import org.joda.time.DateTime;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Rectangle;
+import org.openqa.selenium.interactions.internal.Coordinates;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -43,19 +45,40 @@ public class JacquardAppleHelper  extends IosActivity {
     public void exitCommuterScreen(){
 
 
+        IOSElement element = findByAccessibility("Customize");
+
+       Rectangle cordinates =element.getRect();
+
+        System.out.println(element.getLocation().getX());
+        System.out.println(element.getLocation().getY());
+
+        System.out.println( cordinates.getX());
+        System.out.println( cordinates.getHeight());
+        System.out.println( cordinates.getWidth());
+
+        System.out.println( cordinates.getY());
+
+
+        TouchAction touchAction  = new TouchAction(driver);
+        TouchAction touchAction1  = new TouchAction(driver);
+
+        touchAction.press(element).waitAction(Duration.ofSeconds(3)).moveTo( 150,element.getLocation().getY()+30).release();
+        touchAction1.press(element).moveTo(150,element.getLocation().getY()).release();
+
+        //touchAction.m
+
+        driver.performTouchAction(touchAction);
+        driver.performTouchAction(touchAction1);
+
         Dimension dimensions = driver.manage().window().getSize();
-        Double screenHeightStart = dimensions.getHeight() * 0.5;
-        int x = screenHeightStart.intValue();
-        Double screenHeightEnd = dimensions.getWidth() * 0.95;
-        int y = screenHeightEnd.intValue();
-       // driver.swipe(200, scrollEnd, 200, scrollStart, 1000);
+        int startX = (int) (dimensions.getWidth() * 0.6);
+        int endX = (int) (dimensions.getWidth() * 0.1);
+        int yconst = (int) (dimensions.getHeight() * 0.1);
 
-        TouchAction action = new TouchAction(driver);
-        action.tap(x,y).perform();
+        driver.swipe(startX,yconst,endX,yconst,1000);
 
-        Markup markup = MarkupHelper.createLabel("Performing BrushIn Gesture ", ExtentColor.CYAN);
-        test.info(markup);
-        System.out.println("Performing BrushIn");
+
+
 
 
     }
@@ -464,6 +487,9 @@ driver.performTouchAction(touchAction);
         int height = dimension.getHeight();
         int width = dimension.getWidth();
 
+
+
+
         int stratx = (int) (width * 0.9);
         int endx = (int) (width * 0.1);
 
@@ -611,7 +637,7 @@ driver.performTouchAction(touchAction);
 
 
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
 
 
         Calendar cal = Calendar.getInstance();
@@ -712,7 +738,7 @@ return batteryValue;
 
     public Map iosLogRelativeBatteryLevels(Map map,int Current){
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
 
 
         Calendar cal = Calendar.getInstance();

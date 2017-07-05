@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -42,17 +43,18 @@ final AndroidLauncher androidLauncher = new AndroidLauncher();
 
         new Thread(new Runnable() {
             public void run() {
-                androidLauncher.startProcess("4747");
+                androidLauncher.startProcess("4747","emulator");
             }
         }).start();
 
         new Thread(new Runnable() {
             public void run() {
-                androidLauncher.startProcess("4748");
+                androidLauncher.startProcess("4748","iphone");
             }
         }).start();
 
-
+        System.out.println("Omkar is great" +
+                "");
 
 
 //androidLauncher.createInstances("4266");
@@ -99,17 +101,20 @@ final AndroidLauncher androidLauncher = new AndroidLauncher();
         }
 
 
-
-
-
-
-
     }
 
 
-    private void startProcess(String s) {
+    private void startProcess(String s ,String configration) {
 
+        DateTime time = new DateTime();
+        int hr =  time.getHourOfDay();
+        int min = time.getMinuteOfHour();
 
+        String fileName = configration+Integer.toString(hr)+"_"+Integer.toString(min);
+        ;
+        System.out.println(hr + ":"+min);
+
+        System.out.println(fileName);
         List<String> values = new ArrayList<String>();
         try {
 
@@ -117,7 +122,7 @@ final AndroidLauncher androidLauncher = new AndroidLauncher();
 
 //            ProcessBuilder pb = new ProcessBuilder("/bin/bash", "-c",
 //                    "/usr/local/Cellar/libimobiledevice/HEAD-53fede0/bin/ideviceinfo -u "+Udid+" -q com.apple.mobile.battery -k BatteryCurrentCapacity");
-            ProcessBuilder pb = new ProcessBuilder("/bin/bash", "-c",  "/usr/local/bin/appium -a 0.0.0.0 -p "+s+" -U b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4 ");
+            ProcessBuilder pb = new ProcessBuilder("/bin/bash", "-c",  "/usr/local/bin/appium -a 0.0.0.0 -p "+s+" > "+fileName+".log");
             //   ProcessBuilder pb = new ProcessBuilder("/bin/bash", "-c",  "killall node");
 //appium -a 0.0.0.0 -p 4723 -U b9bad8c8321ce8e1e28ea5b99d14ca167b5672d4
             Process process = pb.start();

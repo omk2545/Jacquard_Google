@@ -1,0 +1,828 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/6d3843c29c354373fafad29c03a1a89b7e06c374/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Jacquard-Performance-Iphone</title>
+
+</head>
+
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Iphone Battery Consumption report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Jul 4, 2017 12:00:38 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.6</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>108</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Apple Test</span>
+						<span class='test-time'>Jul 4, 2017 12:00:38 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 4, 2017 12:00:38 PM</span>
+	<span class='label end-time'>Jul 4, 2017 02:07:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>2h 7m 18s+273ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:01:50 PM</td>
+					<td class='step-details'><span class='label white-text green'>Initial battery Level: 57@ time 12:01:49</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:02:29 PM</td>
+					<td class='step-details'><span class='label white-text green'>User is already on-boarded </span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:04:06 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performing BrushIn Gesture </span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:05:14 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performing BrushIn Gesture </span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:12:15 PM</td>
+					<td class='step-details'><span class='label white-text green'>eta is assigned to the brush in gersture</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:15:16 PM</td>
+					<td class='step-details'><span class='label white-text green'>next direction is assigned to the Brush-out gersture</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:17:11 PM</td>
+					<td class='step-details'><span class='label white-text green'>count is assigned to the double tap gersture</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:17:11 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 51 Battery down by 6 % at 12:17:11</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:18:55 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:19:12 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 51 Battery down by 6 % at 12:19:12</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:20:56 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:21:13 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 50 Battery down by 7 % at 12:21:13</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:22:57 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:23:14 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 50 Battery down by 7 % at 12:23:14</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:24:58 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:15 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 49 Battery down by 8 % at 12:25:14</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:57 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:14 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 49 Battery down by 8 % at 12:27:14</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:58 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:15 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 48 Battery down by 9 % at 12:29:15</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:00 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:17 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 48 Battery down by 9 % at 12:31:17</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:33:01 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:33:17 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 47 Battery down by 10 % at 12:33:17</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:35:01 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:35:18 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 47 Battery down by 10 % at 12:35:18</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:37:02 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:37:19 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 46 Battery down by 11 % at 12:37:19</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:39:03 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:39:20 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 46 Battery down by 11 % at 12:39:20</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:41:04 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:41:20 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 45 Battery down by 12 % at 12:41:20</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:43:05 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:43:22 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 45 Battery down by 12 % at 12:43:22</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:45:07 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:45:24 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 44 Battery down by 13 % at 12:45:24</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:47:10 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:47:31 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 43 Battery down by 14 % at 12:47:31</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:49:13 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:49:33 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 42 Battery down by 15 % at 12:49:33</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:18 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:40 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 42 Battery down by 15 % at 12:51:40</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:24 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:44 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 41 Battery down by 16 % at 12:53:44</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:29 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:50 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 40 Battery down by 17 % at 12:55:49</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:34 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:55 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 39 Battery down by 18 % at 12:57:55</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:59:39 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:00:02 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 39 Battery down by 18 % at 13:00:02</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:01:48 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 38 Battery down by 19 % at 13:02:10</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:03:55 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:18 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 37 Battery down by 20 % at 13:04:18</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:06:02 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:06:26 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 36 Battery down by 21 % at 13:06:26</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:08:11 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:08:35 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 36 Battery down by 21 % at 13:08:35</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:10:20 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:10:45 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 35 Battery down by 22 % at 13:10:45</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:12:31 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:12:57 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 34 Battery down by 23 % at 13:12:57</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:14:41 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:15:08 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 33 Battery down by 24 % at 13:15:08</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:16:53 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:17:21 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 32 Battery down by 25 % at 13:17:21</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:19:04 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:19:37 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 32 Battery down by 25 % at 13:19:37</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:21:19 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:21:53 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 31 Battery down by 26 % at 13:21:53</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:23:36 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:24:06 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 30 Battery down by 27 % at 13:24:06</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:25:51 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:26:25 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 29 Battery down by 28 % at 13:26:24</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:28:08 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:28:42 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 28 Battery down by 29 % at 13:28:41</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:30:26 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:31:12 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 28 Battery down by 29 % at 13:31:12</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:32:56 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:38 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 27 Battery down by 30 % at 13:33:37</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:35:22 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:36:04 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 27 Battery down by 30 % at 13:36:04</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:37:47 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:38:28 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 26 Battery down by 31 % at 13:38:28</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:40:13 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:40:54 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 25 Battery down by 32 % at 13:40:54</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:42:38 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:43:20 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 24 Battery down by 33 % at 13:43:20</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:45:05 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:45:46 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 24 Battery down by 33 % at 13:45:46</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:47:32 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:48:14 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 23 Battery down by 34 % at 13:48:13</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:57 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:50:38 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 22 Battery down by 35 % at 13:50:38</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:52:24 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:53:06 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 21 Battery down by 36 % at 13:53:05</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:52 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:55:34 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 21 Battery down by 36 % at 13:55:34</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:19 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:58:14 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 20 Battery down by 37 % at 13:58:14</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:56 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:00:38 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 19 Battery down by 38 % at 14:00:38</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:02:20 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:03:03 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 18 Battery down by 39 % at 14:03:03</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:04:47 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:05:29 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 18 Battery down by 39 % at 14:05:29</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:07:15 PM</td>
+					<td class='step-details'><span class='label white-text cyan'>Performed Brush in, Brush out, Double Tap for 5 times</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:07:57 PM</td>
+					<td class='step-details'><span class='label white-text red'>Battery level: 17 Battery down by 40 % at 14:07:57</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>108</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jul 4, 2017 12:00:38 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jul 4, 2017 02:08:01 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>7,642,887ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 1,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 108,
+				exceptionsChild: 0,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/5ed7b0c339b51aa347b44ccaa2e2ff29905b2f9f/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+	</body>
+	
+</html>

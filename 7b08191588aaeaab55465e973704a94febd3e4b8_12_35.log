@@ -1,0 +1,5 @@
+[Appium] Welcome to Appium v1.6.4
+[Appium] Non-default server args:
+[Appium]   port: 4727
+[Appium] Appium REST http interface listener started on 0.0.0.0:4727
+[Appium] Received SIGTERM - shutting down
